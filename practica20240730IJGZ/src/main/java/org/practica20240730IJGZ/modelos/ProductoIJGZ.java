@@ -1,7 +1,6 @@
 package org.practica20240730IJGZ.modelos;
 
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
@@ -20,7 +19,7 @@ public class ProductoIJGZ {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
+    public Integer id;
 
     @NotBlank(message = "El nombre es requerido")
     public String nombreIJGZ;
@@ -43,11 +42,11 @@ public class ProductoIJGZ {
     public ProductoIJGZ() {
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
